@@ -1,0 +1,27 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="col-md-12">
+  <h1>Submit Leave</h1><br>
+  <form ng-click="submit();">
+    <table>
+      <tr>
+        <td><label for="Date-From">Date - From: </label></td>
+        <td><input type=date ng-model="entry.dateFrom" name="dateFrom" id="dateFrom" size="20"><br><br></td>
+      </tr>
+      <tr>
+        <td><label for="Date-To">Date - To: </label></td>
+        <td><input type=date ng-model="entry.dateTo" name="dateTo" id="dateTo" size="20"><br><br></td>
+      </tr>
+      <tr>
+        <td><label for="Time-From">Time - From: </label></td>
+        <td><input type=time ng-model="entry.timeFrom" name="timeFrom" id="timeFrom" size="20"><br><br></td>
+      </tr>
+      <tr>
+        <td><label for="Time-To">Time - To: </label></td>
+        <td><input type=time ng-model="entry.timeTo" name="timeTo" id="timeTo" size="20"><br><br></td>
+      </tr>
+    </table>
+      <input type="submit" id="submit" value="Submit"/>
+  </form>
+
+</div>
