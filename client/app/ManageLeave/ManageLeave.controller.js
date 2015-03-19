@@ -5,6 +5,7 @@ angular.module('leave2App')
     $scope.message = 'Hello';
     $scope.entry = function(){};
     $scope.submit = function() {
+      console.log ("I love myself");
     }
 
   });
