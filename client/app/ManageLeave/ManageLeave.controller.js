@@ -1,11 +1,15 @@
 'use strict';
 
 angular.module('leave2App')
-  .controller('ManageLeaveCtrl', function ($scope, userEntries) {
+  .controller('ManageLeaveCtrl', function ($scope, leaveData, Auth) {
     $scope.message = 'Hello';
-    $scope.entry = function(){};
-    $scope.submit = function() {
-      console.log ("I love myself");
-    }
+    //var entree = {};
+    $scope.entries = leaveData.query();
+    $scope.hasChange = false;
+    $scope.approve = function(entree) {
 
+      entree.approved = true;
+      leaveData.update({  id: entree._id  }, entree);
+
+    };
   });

@@ -15,17 +15,23 @@
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
       <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+      <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css" />
+      <link rel="stylesheet" href="bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
     <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
       <link rel="stylesheet" href="app/AdminDashboard/AdminDashboard.css">
+      <link rel="stylesheet" href="app/CancelLeave/CancelLeave.css">
       <link rel="stylesheet" href="app/ManageLeave/ManageLeave.css">
+      <link rel="stylesheet" href="app/SubmitLeave/SubmitLeave.css">
       <link rel="stylesheet" href="app/UserDashboard/UserDashboard.css">
+      <link rel="stylesheet" href="app/ViewLeave/ViewLeave.css">
       <link rel="stylesheet" href="app/account/login/login.css">
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/calendarpage/calendarpage.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
@@ -64,6 +70,11 @@
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+      <script src="bower_components/fullcalendar/fullcalendar.js"></script>
+      <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
+      <script src="bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
@@ -72,16 +83,24 @@
           <!-- injector:js -->
           <script src="app/AdminDashboard/AdminDashboard.controller.js"></script>
           <script src="app/AdminDashboard/AdminDashboard.js"></script>
+          <script src="app/CancelLeave/CancelLeave.controller.js"></script>
+          <script src="app/CancelLeave/CancelLeave.js"></script>
           <script src="app/ManageLeave/ManageLeave.controller.js"></script>
           <script src="app/ManageLeave/ManageLeave.js"></script>
+          <script src="app/SubmitLeave/SubmitLeave.controller.js"></script>
+          <script src="app/SubmitLeave/SubmitLeave.js"></script>
           <script src="app/UserDashboard/UserDashboard.controller.js"></script>
           <script src="app/UserDashboard/UserDashboard.js"></script>
+          <script src="app/ViewLeave/ViewLeave.controller.js"></script>
+          <script src="app/ViewLeave/ViewLeave.js"></script>
           <script src="app/account/account.js"></script>
           <script src="app/account/login/login.controller.js"></script>
           <script src="app/account/settings/settings.controller.js"></script>
           <script src="app/account/signup/signup.controller.js"></script>
           <script src="app/admin/admin.controller.js"></script>
           <script src="app/admin/admin.js"></script>
+          <script src="app/calendarpage/calendarpage.controller.js"></script>
+          <script src="app/calendarpage/calendarpage.js"></script>
           <script src="app/leaveData/leaveData.service.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
