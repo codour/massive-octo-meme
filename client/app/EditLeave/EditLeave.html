@@ -1,3 +1,22 @@
 <div class="col-md-12">
-This is the EditLeave view.
+  <h1>My Leave</h1><br>
+  <form ng-submit="submit()">
+    <table>
+      <!--<tr ng-repeat="friend in friends | filter:searchText">-->
+      <tr ng-repeat="entry in entries"  >
+        <td>From: <input type=text ng-model="entry.dateFrom" name="dateFrom" id="dateFrom" placeholder={{entry.dateFrom}}> </td>
+        <td>To: <input type=text ng-model="entry.dateTo" name="dateTo" id="dateTo" placeholder={{entry.dateTo}}>  </td>
+        <td>Time: <input type=text ng-model="entry.timeFrom" name="timeFrom" id="timeFrom" placeholder={{entry.timeFrom}}>  </td>
+        <td>-  <input type=text ng-model="entry.timeTo" name="timeTo" id="timeTo" placeholder={{entry.timeTo}}>  </td>
+        <td>Status: <span ng-if="entry.approved">Approved</span><span ng-if="!entry.approved">Pending approval</span> </td>
+        </a></tr></td>
+      <br>
+      <!--<td><input type="submit" id="submit" value="Cancel" /></td>-->
+      </tr>
+      <!--<tr ng-repeat="username in entries">
+      {{entries}}<br>
+      <input type=text ng-model="entry.dateTo" name="dateTo" id="dateTo" placeholder={{entry.dateTo}}>-->
+    </table>
+    <input type="submit" id="submit" value="Submit" />
+  </form>
 </div>
