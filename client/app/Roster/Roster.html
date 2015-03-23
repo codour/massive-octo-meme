@@ -3,7 +3,7 @@
   <form>
     <table>
       <!--<tr ng-repeat="entry in entries  | filter:isApproved(entry)">-->
-      <tr ng-repeat="entry in entries | filter: false"><!--I have no idea why the filter works-->
+      <tr ng-repeat="entry in entries | filter: true"><!--I have no idea why the filter works-->
         <td>From: {{entry.dateFrom}}  </td>
         <td>To: {{entry.dateTo}}  </td>
         <td>&emsp; Time: {{entry.timeFrom}}  </td>
