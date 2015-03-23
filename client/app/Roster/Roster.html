@@ -1,0 +1,18 @@
+<div class="col-md-12">
+  <h1>Leave Roster</h1><br>
+  <form>
+    <table>
+      <!--<tr ng-repeat="entry in entries  | filter:isApproved(entry)">-->
+      <tr ng-repeat="entry in entries">
+        <td>From: {{entry.dateFrom}}  </td>
+        <td>To: {{entry.dateTo}}  </td>
+        <td>Time: {{entry.timeFrom}}  </td>
+        <td>-  {{entry.timeTo}}  </td>
+        <td><br><br></td>
+      </tr>
+
+      <!--<tr ng-repeat="username in entries">
+      {{entries}}<br>-->
+    </table>
+  </form>
+</div>
