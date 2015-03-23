@@ -11,7 +11,7 @@ var LeaveDataSchema = new Schema({
   dateTo: String,
   timeFrom: String,
   timeTo: String,
-  username: String,
+  loginID: String,
   approved: Boolean,
 
 });

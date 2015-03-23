@@ -3,11 +3,12 @@
   <form>
     <table>
       <!--<tr ng-repeat="entry in entries  | filter:isApproved(entry)">-->
-      <tr ng-repeat="entry in entries">
+      <tr ng-repeat="entry in entries | filter: false"><!--I have no idea why the filter works-->
         <td>From: {{entry.dateFrom}}  </td>
         <td>To: {{entry.dateTo}}  </td>
-        <td>Time: {{entry.timeFrom}}  </td>
+        <td>&emsp; Time: {{entry.timeFrom}}  </td>
         <td>-  {{entry.timeTo}}  </td>
+        <td>&emsp; User: {{entry.loginID}}  </td>
         <td><br><br></td>
       </tr>
 
