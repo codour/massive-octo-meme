@@ -2,7 +2,6 @@
 
 angular.module('leave2App')
   .controller('ManageLeaveCtrl', function ($scope, leaveData, Auth) {
-    $scope.message = 'Hello';
     //var entree = {};
     $scope.entries = leaveData.query();
     $scope.hasChange = false;

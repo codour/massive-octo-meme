@@ -9,6 +9,7 @@
         <td>Time: <input type=text ng-model="entry.timeFrom" name="timeFrom" id="timeFrom" placeholder={{entry.timeFrom}}>  </td>
         <td>-  <input type=text ng-model="entry.timeTo" name="timeTo" id="timeTo" placeholder={{entry.timeTo}}>  </td>
         <td>Status: <span ng-if="entry.approved">Approved</span><span ng-if="!entry.approved">Pending approval</span> </td>
+        <td><br><input type="submit" id="submit" value="Submit" ng-click="submit(entry)" /></td>
         </a></tr></td>
       <br>
       <!--<td><input type="submit" id="submit" value="Cancel" /></td>-->
@@ -17,6 +18,7 @@
       {{entries}}<br>
       <input type=text ng-model="entry.dateTo" name="dateTo" id="dateTo" placeholder={{entry.dateTo}}>-->
     </table>
-    <input type="submit" id="submit" value="Submit" />
+    <!--<input type="submit" id="submit" value="Submit" />-->
   </form>
+  <pre>{{entries}}</pre>
 </div>
