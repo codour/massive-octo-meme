@@ -8,7 +8,7 @@
         <td>  To: {{entry.dateTo}}  </td>
         <td>  Time: {{entry.timeFrom}}  </td>
         <td>  -  {{entry.timeTo}}  </td>
-        <td>Status: <span ng-if="entry.status">Approved</span><span ng-if="!entry.status">Pending approval</span></td>
+        <td>Status: <span ng-if="entry.approved">Approved</span><span ng-if="!entry.approved">Pending approval</span></td>
         <br>
       </tr>
       <!--<tr ng-repeat="username in entries">

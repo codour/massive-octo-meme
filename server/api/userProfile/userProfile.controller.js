@@ -5,9 +5,10 @@ var UserProfile = require('./userProfile.model');
 
 // Get list of userProfiles
 exports.index = function(req, res) {
-  UserProfile.find(function (err, userProfiles) {
+
+  UserProfile.find(function (err, userProfile) {
     if(err) { return handleError(res, err); }
-    return res.json(200, userProfiles);
+    return res.json(200, userProfile);
   });
 };
 

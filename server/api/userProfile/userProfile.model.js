@@ -8,7 +8,8 @@ var UserProfileSchema = new Schema({
   address: String,
   mobile: String,
   landLine: String,
-  active: Boolean
+  username: String,
+  active: Boolean,
 });
 
-module.exports = mongoose.model('UserProfile', UserProfileSchema);
+module.exports = mongoose.model('userProfile', UserProfileSchema);

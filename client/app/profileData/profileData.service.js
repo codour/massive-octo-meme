@@ -6,17 +6,17 @@ angular.module('leave2App')
     // var meaningOfLife = 42;
 
     // Public API here
-    return $resource('/api/userProfile/:id/', {
+    return $resource('/api/UserProfile/:id/', {
         id: '@_id'
       },
       {
         'update': {
           method: 'PUT'
-        },
+        }
 
-        'view': {
-          method: 'GET'
-        },
+        /*,'view': {
+          method: 'GET', isArray: true
+        }*/
 
       });
   });
