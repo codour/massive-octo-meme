@@ -4,7 +4,7 @@ angular.module('leave2App')
   .controller('EditLeaveCtrl', function ($scope, leaveData, Auth) {
 
     $scope.entries = leaveData.query();
-
+    $scope.getCurrentUser = Auth.getCurrentUser().name;
     /*$scope.submit = function() {
       angular.forEach($scope.entries, function(u, i) {
          $scope.entries.dateFrom = dateFrom;

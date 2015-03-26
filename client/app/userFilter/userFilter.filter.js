@@ -7,7 +7,7 @@ angular.module('leave2App')
       return thisuser === Auth.getCurrentUser().name;
     }
 
-    isSameUser.$stateful = true;
+   // isSameUser.$stateful = true;
 
     return isSameUser;
   });

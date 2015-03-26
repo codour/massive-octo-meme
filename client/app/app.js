@@ -6,8 +6,7 @@ angular.module('leave2App', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ui.calendar',
-  'mwl.calendar',
+  'ui.calendar'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
