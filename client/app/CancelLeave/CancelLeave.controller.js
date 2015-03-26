@@ -3,7 +3,7 @@
 angular.module('leave2App')
   .controller('CancelLeaveCtrl', function ($scope, leaveData, Auth) {
     $scope.message = 'Hello';
-
+    $scope.test = moment();
     $scope.entries = leaveData.query();
 
     $scope.delete = function(entree) {

@@ -7,7 +7,7 @@ angular.module('leave2App', [
   'ui.router',
   'ui.bootstrap',
   'ui.calendar',
-  'mwl.calendar'
+  'mwl.calendar',
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

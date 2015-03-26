@@ -1,9 +1,11 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
 <div class="col-md-12">
   <h1>My Leave</h1><br>
-  <form ng-submit="submit()">
+  <form>
     <table>
       <!--<tr ng-repeat="friend in friends | filter:searchText">-->
-      <tr ng-repeat="entry in entries"  >
+      <tr ng-repeat="entry in entries | filter: userFilter" >
         <td>From: <input type=text ng-model="entry.dateFrom" name="dateFrom" id="dateFrom" placeholder={{entry.dateFrom}}> </td>
         <td>To: <input type=text ng-model="entry.dateTo" name="dateTo" id="dateTo" placeholder={{entry.dateTo}}>  </td>
         <td>&emsp;Time: <input type=text ng-model="entry.timeFrom" name="timeFrom" id="timeFrom" placeholder={{entry.timeFrom}}>  </td>
@@ -12,11 +14,8 @@
         <td>&emsp;<input type="submit" id="submit" value="Submit" ng-click="submit(entry)" /></td>
         </a></tr></td>
       <br>
-      <!--<td><input type="submit" id="submit" value="Cancel" /></td>-->
       </tr>
-      <!--<tr ng-repeat="username in entries">
-      {{entries}}<br>
-      <input type=text ng-model="entry.dateTo" name="dateTo" id="dateTo" placeholder={{entry.dateTo}}>-->
+      Username: {{Auth.getCurrentUser().name}}<br>
     </table>
     <!--<input type="submit" id="submit" value="Submit" />-->
   </form>

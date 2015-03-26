@@ -1,16 +1,24 @@
-<div class="col-md-12">
-  <h1>My Profile</h1><br>
-  <form>
-    <table>
-      <!--<tr ng-repeat="friend in friends | filter:searchText">-->
-      <tr ng-repeat="entry in entries" >
-        <td>Name: {{entry.name}} </td>
-        <td>Address: {{entry.address}}</td>
-        <td>Home: {{entry.landLine}}  </td>
-        <td>Mobile: {{entry.mobile}}</td>
-        <td></td>
-        <td><input type="submit" id="submit" value="submit" ng-click="submit(entry)" /></td>
-      </tr>
-    </table>
-  </form>
-</div>
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<h1>My Profile</h1><br>
+<form ng-repeat="entry in entries">
+  <table>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="entry.name" ng-model="entry.name" placeholder={{entry.name}}>
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" class="form-control" id="entry.address" ng-model="entry.address" placeholder={{entry.address}}>
+    </div>
+    <div class="form-group">
+      <label for="landLine">Phone(Home):</label>
+      <input type="text" class="form-control" id="entry.landLine" ng-model="entry.landLine" placeholder={{entry.landLine}}>
+    </div></tr>
+    <div class="form-group">
+      <label for="mobile">Phone(Mobile):</label>
+      <input type="text" class="form-control" id="entry.mobile" ng-model="entry.mobile" placeholder={{entry.mobile}}>
+    </div></tr>
+    <tr><input type="submit" id="submit" value="Submit" ng-click="submit(entry)" /></tr>
+  </table>
+</form>

@@ -8,31 +8,32 @@
       <tr>
         <td><label for="Date-From">Date - From: </label></td>
         <td><!--<input type=text ng-model="entry.dateFrom" name="dateFrom" id="dateFrom">-->
-          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="entry.dateFrom" is-open="opened" min-date="minDate" max-date="'2020-12-31'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="entry.dateFrom" is-open="date0" min-date="minDate" max-date="'2020-12-31'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
         </td>
         <td><span class="input-group-btn">
-             <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              <button type="button" class="btn btn-default" ng-click="toggleOpenDatePicker($event,'date0')"><i class="glyphicon glyphicon-calendar"></i></button>
            </span><br><br>
         </td>
       </tr>
       <tr>
         <td><label for="Date-To">Date - To: </label></td>
-        <td><input type=text ng-model="entry.dateTo" name="dateTo" id="dateTo" size="20"><br><br></td>
+        <td><input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="entry.dateTo" is-open="date1" min-date="minDate" max-date="'2020-12-31'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+        </td>
+        <td><span class="input-group-btn">
+             <button type="button" class="btn btn-default" ng-click="toggleOpenDatePicker($event,'date1')"><i class="glyphicon glyphicon-calendar"></i></button>
+           </span><br><br>
+        </td>
       </tr>
       <tr>
         <td><label for="Time-From">Time - From: </label></td>
-        <td><input type=text ng-model="entry.timeFrom" name="timeFrom" id="timeFrom" size="20"><br><br></td>
+        <td><input type=text ng-model="entry.timeFrom" name="timeFrom" id="timeFrom"><br><br></td>
       </tr>
       <tr>
         <td><label for="Time-To">Time - To: </label></td>
-        <td><input type=text ng-model="entry.timeTo" name="timeTo" id="timeTo" size="20"><br><br></td>
+        <td><input type=text ng-model="entry.timeTo" name="timeTo" id="timeTo"><br><br></td>
       </tr>
     </table>
     <input type="submit" id="submit" value="Submit" />
   </form>
-  <div class="col-md-6">
-    <label>Format:</label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
-  </div>
-  <pre>data = {{entry}}</pre>
 </div>
 
