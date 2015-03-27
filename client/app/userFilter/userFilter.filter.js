@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('leave2App')
-  .filter('userFilter', function (Auth) {
+  .filter('userFilter', function ($q, Auth) {
     /*return function (thisuser) {
       console.log('thisuser ', thisuser );
       console.log('Auth ', Auth );
@@ -11,9 +11,14 @@ angular.module('leave2App')
           return true;
       }
     }*/
+    var deferred = $q.defer();
 
-    return function(input) {
+    return function(thisuser) {
+     thisuser.loginID === Auth.getCurrentUser().name;
+    };
 
+
+    /*return function(input) {
       var rs = [];
 
       input.$promise.then(function (resource) {
@@ -25,6 +30,6 @@ angular.module('leave2App')
         console.log('rs', rs );
         return rs;
       });
-    };
+    };*/
 
   });
