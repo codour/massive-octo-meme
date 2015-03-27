@@ -4,8 +4,8 @@
   <h1>My Leave</h1><br>
   <form>
     <table>
-      <!--<tr ng-repeat="friend in friends | filter:searchText">-->
-      <tr ng-repeat="entry in entries | filter: userFilter" >
+      <!--<tr ng-repeat="entry in entries | filter: userFilter" >-->
+      <tr ng-repeat="entry in entries | filter: { loginID : currentUser }" >
         <td>From: <input type=text ng-model="entry.dateFrom" name="dateFrom" id="dateFrom" placeholder={{entry.dateFrom}}> </td>
         <td>To: <input type=text ng-model="entry.dateTo" name="dateTo" id="dateTo" placeholder={{entry.dateTo}}>  </td>
         <td>&emsp;Time: <input type=text ng-model="entry.timeFrom" name="timeFrom" id="timeFrom" placeholder={{entry.timeFrom}}>  </td>
@@ -15,7 +15,7 @@
         </a></tr></td>
       <br>
       </tr>
-      Username: {{getCurrentUser}}<br>
+      <!--Username: {{getCurrentUser}}--><br>
     </table>
     <!--<input type="submit" id="submit" value="Submit" />-->
   </form>

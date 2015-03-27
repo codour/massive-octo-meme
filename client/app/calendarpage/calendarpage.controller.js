@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('leave2App')
-  .controller('CalendarpageCtrl', function ($scope,$compile,uiCalendarConfig) {
+  .controller('CalendarpageCtrl', function ($scope,$compile,uiCalendarConfig,leaveData) {
 
 
 
@@ -10,8 +10,6 @@ angular.module('leave2App')
     var m = date.getMonth();
     var y = date.getFullYear();
     var currentView = "month";
-
-    //$scope.leaveEntries = [];
 
     $scope.eventRender = function( event, element, view ) {
       element.attr({'tooltip': event.title,
@@ -73,6 +71,14 @@ angular.module('leave2App')
       console.log($scope.leaveEntries[i]);
     }
 */
+    $scope.leaveEntries = [];
+    $scope.test = leaveData.query()
+
+      .$promise.then(function(res){
+        console.log(res);
+        $scope.leaveEntries =  res;
+        console.log($scope.leaveEntries[0]);
+      });
 
 
     /* for	(var i = 0; i < $scope.leaveEntries.length; i++) {

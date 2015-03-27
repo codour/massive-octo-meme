@@ -5,7 +5,7 @@
   <form>
     <table>
       <!--<tr ng-repeat="friend in friends | filter:searchText">-->
-      <tr ng-repeat="entry in entries"  >
+      <tr ng-repeat="entry in entries | filter: { loginID : currentUser }"  >
         <td>From: {{entry.dateFrom}}  </td>
         <td>To: {{entry.dateTo}}  </td>
         <td>Time: {{entry.timeFrom}}  </td>

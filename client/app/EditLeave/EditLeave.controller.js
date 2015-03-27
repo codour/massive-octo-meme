@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('leave2App')
-  .controller('EditLeaveCtrl', function ($scope, leaveData, Auth) {
-
+  .controller('EditLeaveCtrl', function ($scope, $filter ,leaveData, Auth) {
     $scope.entries = leaveData.query();
-    $scope.getCurrentUser = Auth.getCurrentUser().name;
+    $scope.currentUser = Auth.getCurrentUser().name;
+    //console.log('My Filter: ', $filter('filter')($scope.entries, {loginID:Auth.getCurrentUser().name}));
+    //$scope.getCurrentUser = Auth.getCurrentUser().name;
     /*$scope.submit = function() {
       angular.forEach($scope.entries, function(u, i) {
          $scope.entries.dateFrom = dateFrom;

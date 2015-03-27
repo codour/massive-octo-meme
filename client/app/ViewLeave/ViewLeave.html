@@ -3,12 +3,12 @@
   <form>
     <table>
       <!--<tr ng-repeat="friend in friends | filter:searchText">-->
-      <tr ng-repeat="entry in entries">
+      <tr ng-repeat="entry in entries | filter: { loginID : currentUser } ">
         <td>From: {{entry.dateFrom}}  </td>
         <td>  To: {{entry.dateTo}}  </td>
-        <td>  Time: {{entry.timeFrom}}  </td>
+        <td>&emsp;  Time: {{entry.timeFrom}}  </td>
         <td>  -  {{entry.timeTo}}  </td>
-        <td>Status: <span ng-if="entry.approved">Approved</span><span ng-if="!entry.approved">Pending approval</span></td>
+        <td>&emsp;Status: <span ng-if="entry.approved">Approved</span><span ng-if="!entry.approved">Pending approval</span></td>
         <br>
       </tr>
       <!--<tr ng-repeat="username in entries">

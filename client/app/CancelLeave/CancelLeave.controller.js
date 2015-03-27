@@ -2,9 +2,9 @@
 
 angular.module('leave2App')
   .controller('CancelLeaveCtrl', function ($scope, leaveData, Auth) {
-    $scope.message = 'Hello';
-    $scope.test = moment();
+
     $scope.entries = leaveData.query();
+    $scope.currentUser = Auth.getCurrentUser().name;
 
     $scope.delete = function(entree) {
       leaveData.remove({ id: entree._id });
